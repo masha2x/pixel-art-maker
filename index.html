@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            background: darkgray;
+        }
+
+        #general {
+            background: lavender;
+            margin: 0 auto;
+            width: 96.5%;
+            height: 94vh;
+            border: 20pt solid darkgrey;
+            border-radius: 65px;
+        }
+
+        #container {
+            height: 500pt;
+            position: relative;
+        }
+
+        #canvas {
+            display: table;
+            border-collapse: collapse;
+            margin: 0 auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .row {
+            display: table-row;
+        }
+
+        .cell {
+            background-color: white;
+            border: 1px solid darkgrey;
+            height: 1em;
+            width: 1em;
+            display: table-cell;
+            border-collapse: collapse;
+        }
+
+        #pallete {
+            margin: 0 auto;
+            height: 30pt;
+            width: 290pt;
+            position: absolute;
+            bottom: 60px;
+            left: calc((100vw - 250pt)/2);
+        }
+
+        .color {
+            border: 1px solid transparent;
+            height: 10pt;
+            width: 10pt;
+            display: inline-block;
+            margin-top: 10pt;
+            border-radius: 25pt;
+        }
+
+        #curColor {
+            display: table;
+            height: 30pt;
+            width: 290pt;
+
+        }
+
+        #square {
+            border: 1px solid darkgrey;
+            height: 20pt;
+            width: 40pt;
+            float: left;
+            background: white;
+        }
+
+        .curCol {
+            vertical-align: middle;
+            display: table-cell;
+            color: dimgrey;
+        }
+
+        #button {
+            vertical-align: middle;
+            float: right;
+        }
+
+        #input {
+            vertical-align: top;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="general">
+        <div id="container">
+            <div id="canvas">
+            </div>
+        </div>
+        <div id="pallete">
+            <div class="color" style="background: red"></div>
+            <div class="color" style="background: blue"></div>
+            <div class="color" style="background: darkmagenta"></div>
+            <div class="color" style="background: darkgreen"></div>
+            <div class="color" style="background: darkblue"></div>
+            <div class="color" style="background: darkorchid"></div>
+            <div class="color" style="background: darkorange"></div>
+            <div class="color" style="background: gold"></div>
+            <div class="color" style="background: greenyellow"></div>
+            <div class="color" style="background: black"></div>
+            <div class="color" style="background: seagreen"></div>
+            <div class="color" style="background: mediumvioletred"></div>
+            <div class="color" style="background: oldlace"></div>
+            <div class="color" style="background: teal"></div>
+            <div class="color" style="background: slateblue"></div>
+            <div class="color" style="background: skyblue"></div>
+            <div class="color" style="background: white"></div>
+            <input type="color" value="#ffffff" class="color" id="input">
+            <div id="curColor">
+                <div class="curCol">CURRENT COLOR -></div>
+                <div class="curCol">
+                    <div class="curCol" id="square"></div>
+                </div>
+                <div class="curCol"><button id="button">Clear all</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="pixel.js"></script>
+</body>
+
+</html>
